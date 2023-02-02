@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUzum.Api", "MyUzum.Api\MyUzum.Api.csproj", "{129793EA-4F76-43E5-AEC3-D8D19C6DCE8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUzum.Domain", "MyUzum.Domain\MyUzum.Domain.csproj", "{5C3300E6-5DAC-4B2E-8A9B-78D45DA5ED68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUzum.Infrastructure", "MyUzum.Infrastructure\MyUzum.Infrastructure.csproj", "{94BE339A-014F-4E9D-BF52-79DF20059C5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{129793EA-4F76-43E5-AEC3-D8D19C6DCE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{129793EA-4F76-43E5-AEC3-D8D19C6DCE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{129793EA-4F76-43E5-AEC3-D8D19C6DCE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3300E6-5DAC-4B2E-8A9B-78D45DA5ED68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3300E6-5DAC-4B2E-8A9B-78D45DA5ED68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3300E6-5DAC-4B2E-8A9B-78D45DA5ED68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3300E6-5DAC-4B2E-8A9B-78D45DA5ED68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94BE339A-014F-4E9D-BF52-79DF20059C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BE339A-014F-4E9D-BF52-79DF20059C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BE339A-014F-4E9D-BF52-79DF20059C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BE339A-014F-4E9D-BF52-79DF20059C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
