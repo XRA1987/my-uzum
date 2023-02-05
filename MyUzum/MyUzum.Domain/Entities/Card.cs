@@ -14,6 +14,6 @@
         public string CardNumber { get; set; } = string.Empty;
 
 
-        public ICollection<User> Users { get; set; }
+        public ICollection<User>? Users { get; set; }
     }
 }

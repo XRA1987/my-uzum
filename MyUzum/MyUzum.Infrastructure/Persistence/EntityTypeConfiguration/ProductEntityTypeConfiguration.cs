@@ -18,7 +18,7 @@ namespace MyUzum.Infrastructure.EntityTypeConfiguration
                 .HasForeignKey(x => x.CategoryId);
 
             builder.HasOne(x => x.Brand)
-                .WithMany(x =>x.Products)
+                .WithMany(x => x.Products)
                 .HasForeignKey(x => x.BrandId);
         }
     }

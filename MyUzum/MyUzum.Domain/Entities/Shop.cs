@@ -4,7 +4,7 @@
     {
         public Shop()
         {
-            ShopProducts= new List<ShopProduct>();
+            ShopProducts = new List<ShopProduct>();
         }
 
         public int Id { get; set; }

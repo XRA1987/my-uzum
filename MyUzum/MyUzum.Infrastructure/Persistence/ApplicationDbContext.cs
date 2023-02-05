@@ -28,7 +28,7 @@ namespace MyUzum.Infrastructure.Persistence
 
             modelBuilder.ApplyConfiguration(new BoughtProductEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new BrandEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new CardEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new CardTypeConfiguration());
             modelBuilder.ApplyConfiguration(new CatecoryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ContractEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PaymentEntityTypeConfiguration());
@@ -40,6 +40,6 @@ namespace MyUzum.Infrastructure.Persistence
 
             //OR ===> modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
-        
+
     }
 }

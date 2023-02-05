@@ -18,7 +18,7 @@ namespace Uzum.Domain.Entities
 
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public int CardId { get; set; }
+        public int? CardId { get; set; }
 
         public decimal Balance { get; set; }
 

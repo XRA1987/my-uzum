@@ -8,10 +8,10 @@ namespace MyUzum.Infrastructure.EntityTypeConfiguration
     {
         public void Configure(EntityTypeBuilder<ShopProduct> builder)
         {
-            builder.HasKey(s=>s.Id);
+            builder.HasKey(s => s.Id);
 
             builder.HasOne(s => s.Product)
-                .WithMany(s=>s.ShopProducts)
+                .WithMany(s => s.ShopProducts)
                 .HasForeignKey(s => s.ProductId);
 
             builder.HasOne(s => s.Shop)

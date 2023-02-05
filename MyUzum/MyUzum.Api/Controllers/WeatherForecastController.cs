@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyUzum.Api.Controllers
@@ -17,7 +18,7 @@ namespace MyUzum.Api.Controllers
         {
             _logger = logger;
         }
-
+        [Authorize(Policy = "Admin")]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
