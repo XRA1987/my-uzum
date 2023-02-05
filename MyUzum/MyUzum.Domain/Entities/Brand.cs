@@ -4,7 +4,7 @@
     {
         public Brand()
         {
-            Products= new List<Product>();
+            Products = new List<Product>();
         }
         public int Id { get; set; }
         public string Name { get; set; } = null!;

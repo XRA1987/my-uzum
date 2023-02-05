@@ -6,7 +6,7 @@
         {
             BoughtProducts = new List<BoughtProduct>();
             Payments = new List<Payment>();
-            
+
         }
 
         public int Id { get; set; }

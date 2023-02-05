@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyUzum.Infrastructure.Persistence;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyUzum.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230203041751_EntityAndAdminAdded4")]
+    partial class EntityAndAdminAdded4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -270,7 +273,7 @@ namespace MyUzum.Infrastructure.Migrations
                     b.Property<decimal>("Balance")
                         .HasColumnType("numeric");
 
-                    b.Property<int>("CardId")
+                    b.Property<int?>("CardId")
                         .HasColumnType("integer");
 
                     b.Property<string>("FullName")
@@ -301,6 +304,18 @@ namespace MyUzum.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Balance = 0m,
+                            FullName = "Xolmatov Abdurahim",
+                            PasswordHash = "9BD03CFAE8781CB5C1A8BD30600EA03274C5DF36FE5A04F490DE133AEED7503E0FEECDAF0A42A26E1A82DB8CC4C2AF4664F9841604D82DD636B4166CDBA962AE",
+                            PhoneNumber = "994779050",
+                            Role = 1,
+                            UserName = "Xolmatov"
+                        });
                 });
 
             modelBuilder.Entity("Uzum.Domain.Entities.BoughtProduct", b =>
@@ -397,9 +412,7 @@ namespace MyUzum.Infrastructure.Migrations
                 {
                     b.HasOne("Uzum.Domain.Entities.Card", "Card")
                         .WithMany("Users")
-                        .HasForeignKey("CardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CardId");
 
                     b.Navigation("Card");
                 });

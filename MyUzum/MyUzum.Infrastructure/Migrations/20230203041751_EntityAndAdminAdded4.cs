@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyUzum.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class AddEntities : Migration
+    public partial class EntityAndAdminAdded4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -77,7 +77,7 @@ namespace MyUzum.Infrastructure.Migrations
                     UserName = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
                     PasswordHash = table.Column<string>(type: "text", nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: false),
-                    CardId = table.Column<int>(type: "integer", nullable: false),
+                    CardId = table.Column<int>(type: "integer", nullable: true),
                     Balance = table.Column<decimal>(type: "numeric", nullable: false),
                     Role = table.Column<int>(type: "integer", nullable: true)
                 },
@@ -88,8 +88,7 @@ namespace MyUzum.Infrastructure.Migrations
                         name: "FK_Users_Cards_CardId",
                         column: x => x.CardId,
                         principalTable: "Cards",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -237,6 +236,11 @@ namespace MyUzum.Infrastructure.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Balance", "CardId", "FullName", "PasswordHash", "PhoneNumber", "Role", "UserName" },
+                values: new object[] { 1, 0m, null, "Xolmatov Abdurahim", "9BD03CFAE8781CB5C1A8BD30600EA03274C5DF36FE5A04F490DE133AEED7503E0FEECDAF0A42A26E1A82DB8CC4C2AF4664F9841604D82DD636B4166CDBA962AE", "994779050", 1, "Xolmatov" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_BoughtProducts_ContractId",

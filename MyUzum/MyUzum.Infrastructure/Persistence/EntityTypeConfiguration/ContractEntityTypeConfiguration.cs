@@ -20,7 +20,7 @@ namespace MyUzum.Infrastructure.EntityTypeConfiguration
                 .HasForeignKey(x => x.UserId);
 
 
-            
+
         }
     }
 }

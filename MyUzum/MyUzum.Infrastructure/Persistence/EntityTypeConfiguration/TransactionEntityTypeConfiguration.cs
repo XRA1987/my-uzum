@@ -10,9 +10,9 @@ namespace MyUzum.Infrastructure.EntityTypeConfiguration
         {
             builder.HasKey(i => i.Id);
 
-            builder.HasOne(x=>x.ShopProduct)
-                .WithMany(w=>w.Transactions)
-                .HasForeignKey(f=>f.ShopProductId);
+            builder.HasOne(x => x.ShopProduct)
+                .WithMany(w => w.Transactions)
+                .HasForeignKey(f => f.ShopProductId);
         }
     }
 }
